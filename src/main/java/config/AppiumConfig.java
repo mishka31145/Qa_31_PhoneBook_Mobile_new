@@ -15,7 +15,8 @@ public class AppiumConfig {
 //            "deviceName": " Qa21",
 //            "platformVersion": "8.0",
 //            "appPackage": "com.sheygam.contactapp",
-//            "appActivity": ".SplashActivity"
+//            "appActivity": ".SplashActivity",
+//            "appium:automationName": "UiAutomator2"
 //    }
 
     protected static AppiumDriver<AndroidElement> driver;
@@ -24,11 +25,11 @@ public class AppiumConfig {
     public void setUp() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName","Android");
-        capabilities.setCapability("appium:deviceName","my");
-        capabilities.setCapability("appium:platformVersion","8.0");
-        capabilities.setCapability("appium:appPackage","com.sheygam.contactapp");
-        capabilities.setCapability("appium:appActivity",".SplashActivity");
-        capabilities.setCapability("appium:automationName","UiAutomator2");
+        capabilities.setCapability("deviceName","my");
+        capabilities.setCapability("platformVersion","8.0");
+        capabilities.setCapability("appPackage","com.sheygam.contactapp");
+        capabilities.setCapability("appActivity",".SplashActivity");
+        capabilities.setCapability("automationName","UiAutomator2");
 
         driver = new AppiumDriver<AndroidElement>(new URL("http://127.0.0.1:4723/"),capabilities);
 
